@@ -11,10 +11,10 @@ original_file = "wordle_words.txt"
 temp_file = "temp.txt"
 
 def clear_screen():
-		if name == 'nt':
-			_ = system('cls')
-		else:
-			_ = system('clear')
+	if name == 'nt':
+		_ = system('cls')
+	else:
+		_ = system('clear')
             
 board = [
 [" ", " ", " ", " ", " "],
@@ -69,8 +69,7 @@ def solver():
     while True:
         print_board()
         print("Enter 'G' to generate a new word \nUse Y to represent present letters in the right spot, \nN to represent absent letters, \nand W to represent present letters in the wrong spot")
-        results = input().upper()
-        print("E.G. NNYWW")
+        results = input("E.G. NNYWW").upper()
         currentResult = [*results]
         tempWordSet = fiveLetterWords.copy()
         contains = []
